@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Huỳnh Quang Ân - Portfolio</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-[Inter]">
+  <div class="relative min-h-screen overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/15 via-slate-900 to-indigo-700/20 blur-3xl -z-10"></div>
+
+    <header class="max-w-6xl mx-auto px-6 py-10 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <div>
+        <p class="uppercase tracking-[0.35em] text-xs text-emerald-300">Creative Technologist</p>
+        <h1 class="text-4xl md:text-5xl font-black mt-2">Huỳnh Quang Ân</h1>
+        <p class="text-slate-300 mt-4 max-w-xl">Tôi là nhà thiết kế và phát triển web tập trung vào trải nghiệm người dùng, tối ưu hiệu năng và kể chuyện thông qua thiết kế số.</p>
+      </div>
+      <div class="flex gap-4">
+        <a href="#duan" class="px-5 py-3 rounded-full bg-emerald-500 text-slate-900 font-semibold shadow-lg shadow-emerald-500/30 hover:-translate-y-1 transition">Xem dự án</a>
+        <a href="#lienhe" class="px-5 py-3 rounded-full border border-slate-700 hover:border-emerald-400 transition">Liên hệ</a>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 pb-24 space-y-20">
+      <section class="grid gap-6 md:grid-cols-3" id="gioithieu">
+        <div class="col-span-2 bg-slate-900/60 border border-slate-800 rounded-3xl p-8 backdrop-blur">
+          <h2 class="text-xl font-semibold text-emerald-300 mb-3">Giới thiệu</h2>
+          <p class="leading-relaxed text-slate-300">Với hơn 5 năm kinh nghiệm trong thiết kế sản phẩm số, tôi kết hợp nghiên cứu người dùng, mỹ học thị giác và công nghệ front-end để tạo nên những sản phẩm tinh gọn, dễ dùng và giàu cảm xúc.</p>
+        </div>
+        <div class="bg-gradient-to-br from-emerald-500/20 to-indigo-400/20 border border-slate-800 rounded-3xl p-8">
+          <h3 class="text-lg font-semibold mb-4">Thông tin nhanh</h3>
+          <ul class="space-y-3 text-sm text-slate-200">
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Địa điểm</span><span>TP. Hồ Chí Minh</span></li>
+            <li class="flex justify-between border-b border-white/5 pb-2"><span>Chuyên môn</span><span>UX/UI, Front-end</span></li>
+            <li class="flex justify-between"><span>Sở thích</span><span>Nhiếp ảnh, du lịch</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="bg-slate-900/60 border border-slate-800 rounded-3xl p-10" id="kynang">
+        <div class="flex items-center justify-between flex-wrap gap-4">
+          <h2 class="text-2xl font-bold">Năng lực cốt lõi</h2>
+          <div class="flex gap-3 text-xs tracking-widest uppercase text-emerald-300">
+            <span>Chiến lược</span>
+            <span>Kỹ thuật</span>
+            <span>Thẩm mỹ</span>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 mt-10">
+          <article class="space-y-3">
+            <p class="text-emerald-300 font-semibold">01 — UX Research</p>
+            <h3 class="text-xl font-semibold">Tư duy dựa trên dữ liệu</h3>
+            <p class="text-slate-300">Phân tích định tính & định lượng, lập sơ đồ hành trình khách hàng, kiểm chứng usability.</p>
+          </article>
+          <article class="space-y-3">
+            <p class="text-emerald-300 font-semibold">02 — UI Design</p>
+            <h3 class="text-xl font-semibold">Ngôn ngữ hình ảnh nhất quán</h3>
+            <p class="text-slate-300">Thiết kế hệ thống design system, typography, motion subtle giúp tăng tính nhận diện.</p>
+          </article>
+          <article class="space-y-3">
+            <p class="text-emerald-300 font-semibold">03 — Front-end</p>
+            <h3 class="text-xl font-semibold">Tập trung hiệu năng</h3>
+            <p class="text-slate-300">Xây dựng sản phẩm với HTML, CSS, JavaScript hiện đại, tối ưu Lighthouse.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="duan" class="space-y-10">
+        <div class="flex items-center justify-between">
+          <h2 class="text-2xl font-bold">Dự án nổi bật</h2>
+          <button id="filterBtn" class="text-sm px-4 py-2 border border-slate-700 rounded-full hover:border-emerald-400 transition">Lọc theo lĩnh vực</button>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2" id="projectGrid">
+          <article class="project-card bg-slate-900/60 border border-slate-800 rounded-3xl p-6 space-y-3" data-category="fintech">
+            <p class="text-emerald-300 text-sm">Fintech</p>
+            <h3 class="text-xl font-semibold">Nền tảng phân tích đầu tư</h3>
+            <p class="text-slate-300">Thiết kế dashboard real-time giúp nhà đầu tư cá nhân đưa ra quyết định dựa trên dữ liệu.</p>
+            <ul class="text-sm text-slate-400 flex gap-3 flex-wrap">
+              <li>#DesignSystem</li>
+              <li>#Accessibility</li>
+              <li>#VueJS</li>
+            </ul>
+          </article>
+          <article class="project-card bg-slate-900/60 border border-slate-800 rounded-3xl p-6 space-y-3" data-category="healthtech">
+            <p class="text-emerald-300 text-sm">Healthtech</p>
+            <h3 class="text-xl font-semibold">Ứng dụng chăm sóc sức khỏe</h3>
+            <p class="text-slate-300">Tối ưu onboarding và cá nhân hóa giao diện dựa trên hành vi người dùng.</p>
+            <ul class="text-sm text-slate-400 flex gap-3 flex-wrap">
+              <li>#MicroInteraction</li>
+              <li>#ReactNative</li>
+            </ul>
+          </article>
+          <article class="project-card bg-slate-900/60 border border-slate-800 rounded-3xl p-6 space-y-3" data-category="edtech">
+            <p class="text-emerald-300 text-sm">Edtech</p>
+            <h3 class="text-xl font-semibold">Hệ thống học trực tuyến</h3>
+            <p class="text-slate-300">Thiết kế trải nghiệm học tập gamification giúp tăng 35% tỷ lệ hoàn thành khóa.</p>
+            <ul class="text-sm text-slate-400 flex gap-3 flex-wrap">
+              <li>#Gamification</li>
+              <li>#ProductStrategy</li>
+            </ul>
+          </article>
+          <article class="project-card bg-slate-900/60 border border-slate-800 rounded-3xl p-6 space-y-3" data-category="branding">
+            <p class="text-emerald-300 text-sm">Branding</p>
+            <h3 class="text-xl font-semibold">Website kể chuyện thương hiệu</h3>
+            <p class="text-slate-300">Kết hợp motion scrolling và nội dung tương tác tạo trải nghiệm kể chuyện sống động.</p>
+            <ul class="text-sm text-slate-400 flex gap-3 flex-wrap">
+              <li>#Storytelling</li>
+              <li>#GSAP</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="bg-slate-900/60 border border-slate-800 rounded-3xl p-10 space-y-6" id="hanhtrinh">
+        <h2 class="text-2xl font-bold">Hành trình nghề nghiệp</h2>
+        <div class="space-y-6">
+          <div class="flex gap-6">
+            <div class="w-24 text-sm text-slate-400">2022 - nay</div>
+            <div>
+              <h3 class="font-semibold">Lead Product Designer • Stellar Lab</h3>
+              <p class="text-slate-300">Lãnh đạo đội ngũ 6 designer, xây dựng hệ thống component đa nền tảng.</p>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <div class="w-24 text-sm text-slate-400">2020 - 2022</div>
+            <div>
+              <h3 class="font-semibold">Senior UX/UI Designer • NovaTech</h3>
+              <p class="text-slate-300">Triển khai quy trình design thinking cho các sản phẩm B2B.</p>
+            </div>
+          </div>
+          <div class="flex gap-6">
+            <div class="w-24 text-sm text-slate-400">2018 - 2020</div>
+            <div>
+              <h3 class="font-semibold">Product Designer • Freelance</h3>
+              <p class="text-slate-300">Hợp tác cùng startup giai đoạn đầu để hình thành MVP.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="lienhe" class="grid gap-8 md:grid-cols-2">
+        <div class="bg-emerald-500 text-slate-900 rounded-3xl p-10 space-y-4">
+          <h2 class="text-3xl font-black">Kết nối cùng Ân</h2>
+          <p>Tôi luôn sẵn sàng trao đổi về dự án mới, workshop hoặc mentor cho cộng đồng thiết kế.</p>
+          <div class="space-y-2 text-lg">
+            <p>Email: <a href="mailto:hello@huynhquangan.com" class="underline">hello@huynhquangan.com</a></p>
+            <p>Behance · Dribbble · LinkedIn</p>
+          </div>
+        </div>
+        <form class="bg-slate-900/60 border border-slate-800 rounded-3xl p-10 space-y-5">
+          <div>
+            <label class="block text-sm text-slate-400 mb-1">Tên</label>
+            <input type="text" class="w-full px-4 py-3 rounded-2xl bg-slate-950/70 border border-slate-800 focus:border-emerald-400 outline-none" placeholder="Nhập tên của bạn" required />
+          </div>
+          <div>
+            <label class="block text-sm text-slate-400 mb-1">Email</label>
+            <input type="email" class="w-full px-4 py-3 rounded-2xl bg-slate-950/70 border border-slate-800 focus:border-emerald-400 outline-none" placeholder="email@domain.com" required />
+          </div>
+          <div>
+            <label class="block text-sm text-slate-400 mb-1">Thông điệp</label>
+            <textarea rows="4" class="w-full px-4 py-3 rounded-2xl bg-slate-950/70 border border-slate-800 focus:border-emerald-400 outline-none" placeholder="Chia sẻ thêm về nhu cầu của bạn"></textarea>
+          </div>
+          <button type="submit" class="w-full py-3 rounded-2xl bg-emerald-500 text-slate-900 font-semibold hover:bg-emerald-400 transition">Gửi lời nhắn</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="text-center text-sm text-slate-500 py-10">
+      © <span id="year"></span> Huỳnh Quang Ân. Crafted với sự tỉ mỉ và tình yêu dành cho trải nghiệm số.
+    </footer>
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll('.project-card');
+    const filterBtn = document.getElementById('filterBtn');
+    const categories = ['all', 'fintech', 'healthtech', 'edtech', 'branding'];
+    let activeIndex = 0;
+
+    filterBtn.addEventListener('click', () => {
+      activeIndex = (activeIndex + 1) % categories.length;
+      const current = categories[activeIndex];
+      filterBtn.textContent = current === 'all' ? 'Lọc theo lĩnh vực' : `Lĩnh vực: ${current}`;
+      cards.forEach(card => {
+        const match = current === 'all' || card.dataset.category === current;
+        card.style.opacity = match ? '1' : '0.2';
+        card.style.transform = match ? 'scale(1)' : 'scale(0.98)';
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
